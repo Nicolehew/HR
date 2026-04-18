@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Users, Clock, Receipt, DollarSign, UserCog } from 'lucide-react'
+import LogoutButton from '@/app/components/LogoutButton'
 
 const navItems = [
   { href: '/boss/today', label: 'Today', icon: Clock },
@@ -37,6 +38,9 @@ export default function BossLayout({ children }: { children: React.ReactNode }) 
             </Link>
           ))}
         </nav>
+        <div className="p-3 border-t border-gray-100">
+          <LogoutButton className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-500 hover:bg-gray-50 hover:text-red-600 transition-colors w-full" />
+        </div>
       </aside>
 
       {/* Mobile top nav */}

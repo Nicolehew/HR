@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Home, Clock, FileText, Receipt } from 'lucide-react'
+import { Home, Clock, FileText, Receipt, LogOut } from 'lucide-react'
+import LogoutButton from '@/app/components/LogoutButton'
 
 export default function DriverLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -22,6 +23,7 @@ export default function DriverLayout({ children }: { children: React.ReactNode }
           <FileText className="w-5 h-5" />
           <span className="text-xs">History</span>
         </Link>
+        <LogoutButton className="flex flex-col items-center gap-1 px-4 py-1 text-gray-500 hover:text-red-600" />
       </nav>
     </div>
   )
